@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+typedef struct racional racional;
+
+struct racional{
+    float a;
+   };
+
+
+racional *create(float aresta){
+    racional*ra;
+    if(aresta >= 0.0 ){
+        ra = malloc(sizeof(racional));
+    if(ra){
+        ra->a = aresta;
+        }
+    }
+    return ra;
+}
+
+void destroy(racional *ra){
+    free(ra);
+}
+  
+int get(racional *ra, float *aresta){
+    if(ra){
+    *aresta = ra->a;
+    return 1;
+    }
+}
+float area(racional *ra){
+    float area = 0.0;
+    if(ra){
+        area = (ra->a * ra->a) * 6.0;
+        return area;
+    }   
+}
+float volume(racional *ra){
+    if(ra){
+        float volume = 0.0;
+        volume = pow(ra->a, 3.0);
+        return volume;
+    }
+    return 0.0;
+}
+    
+int main() {
+   
+   
+   
+   
+   
+   
+   
+    return 0;
+}
