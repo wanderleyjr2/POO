@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+typedef struct cilindro cilindro;
+void destroy(cilindro *ra);
+int get(cilindro *ra, float *al, float *rai);
+float area_base(cilindro *ra);
+
+int main() {
+
+    return 0;
+}
+
+struct cilindro{
+    float raio;
+    float altura;
+   };
+
+
+cilindro *create(float al, float rai){
+    cilindro*ra;
+    if(al >= 0.0  && rai >= 0.0){
+        ra = malloc(sizeof(cilindro));
+    if(ra){
+        ra->raio = rai;
+        ra->altura = al;
+        }
+    }
+    return ra;
+}
+
+void destroy(cilindro *ra){
+    free(ra);
+}
+
+int get(cilindro *ra, float *al, float *rai){
+    if(ra){
+    *rai = ra->raio;
+    *al = ra -> altura;
+    return 1;
+    }
+}
+float area_base(cilindro *ra){
+    float area = 0.0;
+    float pi=3.14;
+    if(ra){
+        area = pi * (pow(ra->raio, 2.0));
+        return area;
+    }   
+}
+
+float area_lateral(cilindro *ra){
+    float area_al = 0.0;
+    float pi=3.14;
+    if(ra){
+        area_al = 2*pi * (ra->raio) * (ra->altura);
+        return area_al;
+    }   
+}
+
+float volume(cilindro *ra){
+    float volume
+    
+    
+}
