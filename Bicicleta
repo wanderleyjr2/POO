@@ -1,0 +1,58 @@
+class Bicicleta {
+    int cadencia = 0;
+    int velocidade = 0;
+    int marcha = 1;
+    
+    void alterarCadencia(int novoValor){
+        cadencia = novoValor;
+    }
+    
+    void alterarMarcha(int novoValor){
+        marcha = novoValor;
+    }
+    
+    void acelerar( int incremento){
+        velocidade = velocidade + incremento;
+    }
+    
+    void aplicarFreios(int decremento){
+        velocidade = velocidade + incremento;
+    }
+    
+    void imprimirEstado(){
+        System.out.println("cadencia:" + cadencia + "velocidade:" 
+        + velocidade + "marcha:" + marcha);
+    }
+    
+    
+    
+
+
+class AplicativoBicicleta{
+    public static void main(string [] args)
+    {
+        //Cria dois objetos
+        // bicicleta diferente
+        Bicicleta bike1 = new bicicleta();
+        Bicicleta bike2 = new bicicleta();
+        
+        // envia mensagem
+        // para esses objetos
+        bike1.acelerarCadencia(50);
+        bike1.acelerar(10);
+        bike1.alterarMarcha(2);
+        bike1.imprimirEstado();
+        
+        bike2.acelerarCadencia(50);
+        bike2.acelerar(10);
+        bike2.alterarMarcha(2);
+        bike2.acelerarCadencia(40);
+        bike2.acelerar(10);
+        bike2.alterarMarcha(3);
+        bike2.imprimirEstado();
+    }
+        
+    class BiciletaMontanha extends Bicicleta{
+        //novos campos e metodos que definem uma bicicleta de montanha
+    }    
+        
