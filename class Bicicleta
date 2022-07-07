@@ -1,10 +1,10 @@
-public class Bicicleta{
+class Bicicleta{
     private int cadencia;
-    private int velocidade;
+    public int velocidade;
     private int marcha;
 
 
-public Bicicleta(int cadenciaInicial, int velocidadeInicial, int machaInicial){
+public Bicicleta(int cadenciaInicial, int velocidadeInicial, int marchaInicial){
     cadencia = cadenciaInicial;
     velocidade = velocidadeInicial;
     marcha = marchaInicial;
@@ -19,7 +19,7 @@ void alterarMarcha( int novoValor){
 void acelerar (int incremento){
     velocidade += incremento;
 }
-void aplicarFreios(int incremento){
+void aplicarFreios(int decremento){
     velocidade -= decremento;
 }
 void imprimirEstado(){
@@ -27,16 +27,17 @@ void imprimirEstado(){
 }
 } //fim da classe da bicicleta 
 
-public class BicicletaMontanha extends Bicicleta {
+class BicicletaMontanha extends Bicicleta {
     private int alturaAssento;
 
 public BicicletaMontanha(
-    int alturaAssentoInical,
-    int cadenciaInicia,
+    int alturaAssentoInicial,
+    int cadenciaInicial,
     int velocidadeInicial,
-    int marchaInicial,
-    ){
-        super(cadenciaInicial, velocidadeInicial, marchaInicial);
+    int marchaInicial
+    )
+    {
+    super(cadenciaInicial, velocidadeInicial, marchaInicial);
         alturaAssento = alturaAssentoInicial;
     }
     public void alterarAlturaAssento(int novoValor){
@@ -45,8 +46,8 @@ public BicicletaMontanha(
 } // fim da classe BicicletaMontanha
 
 class bike{
-    public static void main(string[] args){
-        Bicicleta b1 = nem Bicicleta(0,0,0);
+    public static void main(String[] args){
+        Bicicleta b1 = new Bicicleta(0,0,0);
         b1.velocidade = 10;
         System.out.println("fim");
     }
