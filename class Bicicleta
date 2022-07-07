@@ -1,0 +1,53 @@
+public class Bicicleta{
+    private int cadencia;
+    private int velocidade;
+    private int marcha;
+
+
+public Bicicleta(int cadenciaInicial, int velocidadeInicial, int machaInicial){
+    cadencia = cadenciaInicial;
+    velocidade = velocidadeInicial;
+    marcha = marchaInicial;
+}
+void alterarCadencia( int novoValor){
+    cadencia = novoValor;
+}
+
+void alterarMarcha( int novoValor){
+    marcha = novoValor;
+}
+void acelerar (int incremento){
+    velocidade += incremento;
+}
+void aplicarFreios(int incremento){
+    velocidade -= decremento;
+}
+void imprimirEstado(){
+    System.out.println("cadencia:" + cadencia + "velocidade:" + velocidade + "marcha:" + marcha);
+}
+} //fim da classe da bicicleta 
+
+public class BicicletaMontanha extends Bicicleta {
+    private int alturaAssento;
+
+public BicicletaMontanha(
+    int alturaAssentoInical,
+    int cadenciaInicia,
+    int velocidadeInicial,
+    int marchaInicial,
+    ){
+        super(cadenciaInicial, velocidadeInicial, marchaInicial);
+        alturaAssento = alturaAssentoInicial;
+    }
+    public void alterarAlturaAssento(int novoValor){
+        alturaAssento = novoValor;
+    }
+} // fim da classe BicicletaMontanha
+
+class bike{
+    public static void main(string[] args){
+        Bicicleta b1 = nem Bicicleta(0,0,0);
+        b1.velocidade = 10;
+        System.out.println("fim");
+    }
+}
